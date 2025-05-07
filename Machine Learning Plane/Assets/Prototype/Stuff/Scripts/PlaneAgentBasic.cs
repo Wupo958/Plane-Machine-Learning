@@ -75,6 +75,7 @@ public class PlaneAgentBasic : Agent
         float distanceToCheckpoint = Vector3.Distance(transform.position, checkpoint.transform.position);
 
         AddReward(100 / distanceToCheckpoint);
+
         if(distanceToCheckpoint > 2500){
             AddReward(-500);
             Debug.Log("Too far away");
@@ -89,7 +90,7 @@ public class PlaneAgentBasic : Agent
         }
         previousDistance = distanceToCheckpoint;
         float rollAngle = Vector3.Angle(transform.up, Vector3.up); // Winkel zwischen oben und Welt oben
-        if (rollAngle > 10) // Toleranz von 10 Grad
+        if (rollAngle > 45) // Toleranz von 10 Grad
         {
             AddReward(-rollAngle * 0.001f); // Bestrafung proportional zur Abweichung
         }
@@ -124,7 +125,7 @@ public class PlaneAgentBasic : Agent
         // Manuelle Steuerung für Tests
         var continuousActions = actionsOut.ContinuousActions;
         continuousActions[0] = Input.GetAxis("Vertical"); // Pitch mit W/S
-        continuousActions[1] = Input.GetKey(KeyCode.Q) ? 1f : Input.GetKey(KeyCode.E) ? -1f : 0f; // Roll mit Q/E
+        continuousActions[1] = Input.GetKey(KeyCode.Q) ? -1f : Input.GetKey(KeyCode.E) ? 1f : 0f; // Roll mit Q/E
         continuousActions[2] = Input.GetAxis("Horizontal"); // Yaw mit A/D
         continuousActions[3] = Input.GetKey(KeyCode.Space) ? 1f : 0f; // Schub mit Leertaste
     }

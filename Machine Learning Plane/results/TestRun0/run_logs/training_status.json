@@ -1,0 +1,29 @@
+{
+    "PlaneAgentTest": {
+        "checkpoints": [
+            {
+                "steps": 20508,
+                "file_path": "results\\TestRun0\\PlaneAgentTest\\PlaneAgentTest-20508.onnx",
+                "reward": -350.1515655517578,
+                "creation_time": 1746457236.7536974,
+                "auxillary_file_paths": [
+                    "results\\TestRun0\\PlaneAgentTest\\PlaneAgentTest-20508.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 20508,
+            "file_path": "results\\TestRun0\\PlaneAgentTest.onnx",
+            "reward": -350.1515655517578,
+            "creation_time": 1746457236.7536974,
+            "auxillary_file_paths": [
+                "results\\TestRun0\\PlaneAgentTest\\PlaneAgentTest-20508.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "1.1.0",
+        "torch_version": "2.7.0+cpu"
+    }
+}

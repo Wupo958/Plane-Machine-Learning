@@ -1,0 +1,65 @@
+{
+    "PlaneAgent": {
+        "checkpoints": [
+            {
+                "steps": 1499933,
+                "file_path": "results\\FianlResult\\PlaneAgent\\PlaneAgent-1499933.onnx",
+                "reward": 18080.221710205078,
+                "creation_time": 1746614739.3134022,
+                "auxillary_file_paths": [
+                    "results\\FianlResult\\PlaneAgent\\PlaneAgent-1499933.pt"
+                ]
+            },
+            {
+                "steps": 1999902,
+                "file_path": "results\\FianlResult\\PlaneAgent\\PlaneAgent-1999902.onnx",
+                "reward": null,
+                "creation_time": 1746615086.5479598,
+                "auxillary_file_paths": [
+                    "results\\FianlResult\\PlaneAgent\\PlaneAgent-1999902.pt"
+                ]
+            },
+            {
+                "steps": 2499897,
+                "file_path": "results\\FianlResult\\PlaneAgent\\PlaneAgent-2499897.onnx",
+                "reward": null,
+                "creation_time": 1746615441.9690478,
+                "auxillary_file_paths": [
+                    "results\\FianlResult\\PlaneAgent\\PlaneAgent-2499897.pt"
+                ]
+            },
+            {
+                "steps": 2999978,
+                "file_path": "results\\FianlResult\\PlaneAgent\\PlaneAgent-2999978.onnx",
+                "reward": null,
+                "creation_time": 1746615792.8717477,
+                "auxillary_file_paths": [
+                    "results\\FianlResult\\PlaneAgent\\PlaneAgent-2999978.pt"
+                ]
+            },
+            {
+                "steps": 3257272,
+                "file_path": "results\\FianlResult\\PlaneAgent\\PlaneAgent-3257272.onnx",
+                "reward": null,
+                "creation_time": 1746616038.995809,
+                "auxillary_file_paths": [
+                    "results\\FianlResult\\PlaneAgent\\PlaneAgent-3257272.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 3257272,
+            "file_path": "results\\FianlResult\\PlaneAgent.onnx",
+            "reward": null,
+            "creation_time": 1746616038.995809,
+            "auxillary_file_paths": [
+                "results\\FianlResult\\PlaneAgent\\PlaneAgent-3257272.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "1.1.0",
+        "torch_version": "2.7.0+cpu"
+    }
+}
