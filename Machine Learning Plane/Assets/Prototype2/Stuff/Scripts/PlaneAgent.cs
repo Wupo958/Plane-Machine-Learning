@@ -23,6 +23,7 @@ public class PlaneAgent : Agent
     [SerializeField] private int currentCheckpoint = 0;
     [SerializeField] private int checkpointCounter;
     [SerializeField] private GameObject checkpoint;
+    [SerializeField] private float deathMulitplier = 1;
 
     private bool updraft;
     private bool takingOff;
@@ -99,19 +100,19 @@ public class PlaneAgent : Agent
     {
         if(transform.position.x > 500 || transform.position.x < 0)
         {
-            AddReward(-100);
+            AddReward(-100 * deathMulitplier);
             Debug.Log("Too far Away");
             EndEpisode();
         }
         if (transform.position.z > 500 || transform.position.z < 0)
         {
-            AddReward(-100);
+            AddReward(-100 * deathMulitplier);
             Debug.Log("Too far Away");
             EndEpisode();
         }
         if (transform.position.y > 250 || transform.position.y < 50)
         {
-            AddReward(-100);
+            AddReward(-100 * deathMulitplier);
             Debug.Log("Too high Up");
             EndEpisode();
         }
@@ -120,7 +121,7 @@ public class PlaneAgent : Agent
         float rollAngle = Vector3.Angle(transform.up, Vector3.up);
         if (rollAngle > 90)
         {
-            AddReward(-100);
+            AddReward(-100 * deathMulitplier);
             Debug.Log("Upside Down");
             EndEpisode();
         }
@@ -172,13 +173,13 @@ public class PlaneAgent : Agent
     {
         if (collision.gameObject.CompareTag("Ground"))
         {
-            AddReward(-100);
+            AddReward(-100 * deathMulitplier);
             Debug.Log("Touched Ground");
             EndEpisode();
         }
         else if (collision.gameObject.CompareTag("Plane"))
         {
-            AddReward(-100f);
+            AddReward(-100 * deathMulitplier);
             Debug.Log("Touched Plane");
             EndEpisode();
         }
